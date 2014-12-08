@@ -1,0 +1,9 @@
+c:\users\matei\documents\visual studio 2013\Projects\GameTest\GameTest\bin\Debug\GameTest.exe.config
+c:\users\matei\documents\visual studio 2013\Projects\GameTest\GameTest\obj\Debug\GameTest.csprojResolveAssemblyReference.cache
+c:\users\matei\documents\visual studio 2013\Projects\GameTest\GameTest\obj\Debug\GameTest.Properties.Resources.resources
+c:\users\matei\documents\visual studio 2013\Projects\GameTest\GameTest\obj\Debug\GameTest.csproj.GenerateResource.Cache
+c:\users\matei\documents\visual studio 2013\Projects\GameTest\GameTest\bin\Debug\GameTest.exe
+c:\users\matei\documents\visual studio 2013\Projects\GameTest\GameTest\bin\Debug\GameTest.pdb
+c:\users\matei\documents\visual studio 2013\Projects\GameTest\GameTest\obj\Debug\GameTest.exe
+c:\users\matei\documents\visual studio 2013\Projects\GameTest\GameTest\obj\Debug\GameTest.pdb
+c:\users\matei\documents\visual studio 2013\Projects\GameTest\GameTest\obj\Debug\GameTest.GameForm.resources
