@@ -71,7 +71,12 @@ namespace GameTest.cs
         private void drawRect(Color color, int x, int y, int w, int h)
         {
             brush = new SolidBrush(color);
-            if (hasCtx) ctx.FillRectangle(brush, x, y, w, h);
+
+            try {
+                if (hasCtx) ctx.FillRectangle(brush, x, y, w, h);
+            } catch(InvalidOperationException e){
+
+            }
         }
     }
 }

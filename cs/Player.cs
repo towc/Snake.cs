@@ -12,6 +12,8 @@ namespace GameTest.cs
         private Tile head;
         private List<Tile> body = new List<Tile>();
 
+        public int direction = 0;
+
         public Player(int posX, int posY)
         {
             head = new Tile(posX, posY);
@@ -26,6 +28,10 @@ namespace GameTest.cs
         public void addTile(int posX, int posY)
         {
             body.Add(new Tile(posX, posY));
+        }
+        public void insertTile(Tile tile, int index)
+        {
+            body.Insert(index, tile);
         }
 
         public bool move(int sx, int sy)

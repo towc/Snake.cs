@@ -14,13 +14,29 @@ namespace GameTest
 {
     public partial class GameForm : Form
     {
+        public delegate void setScoreDelegate(int value);
+        public setScoreDelegate scoreDelegate;
+        public delegate void setTimeDelegate(int value);
+        public setTimeDelegate timeDelegate;
+
         private GameTest.cs.Game game;
         private Thread GameThread;
+
+        public void setScore(int value)
+        {
+            LScore.Text = value + " ";
+        }
+        public void setTime(int value)
+        {
+            LTime.Text = value + "s";
+        }
         public GameForm()
         {
             InitializeComponent();
+            scoreDelegate = new setScoreDelegate(setScore);
+            timeDelegate = new setTimeDelegate(setTime);
 
-            game = new GameTest.cs.Game();
+            game = new GameTest.cs.Game(this);
             GameThread = new Thread(new ThreadStart(game.start));
             GameThread.Start();
         }
@@ -39,12 +55,17 @@ namespace GameTest
 
         private void GameForm_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyValue <= 40 && e.KeyValue >= 37) game.setKey(e.KeyValue - 37, true);
+            game.setKey(e, true);
         }
 
         private void GameForm_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue <= 40 && e.KeyValue >= 37) game.setKey(e.KeyValue - 37, false);
+            game.setKey(e, false);
+        }
+
+        private void BTReset_Click(object sender, EventArgs e)
+        {
+            game.reset();
         }
     }
 }

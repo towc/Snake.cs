@@ -46,6 +46,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="cs\Board.cs" />
     <Compile Include="cs\Control.cs" />
     <Compile Include="cs\Drawer.cs" />

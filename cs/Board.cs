@@ -8,15 +8,15 @@ namespace GameTest.cs
 {
     class Board
     {
-        private int w, h;
-        private int[,] array;
+        private int width, height;
+        private int[,] matrix;
         public Tile meal;
 
-        public Board(int width, int height)
+        public Board(int nWidth, int nHeight)
         {
-            w = width;
-            h = height;
-            array = new int[width, height];
+            width = nWidth;
+            height = nHeight;
+            matrix = new int[width, height];
 
             changeMeal();
         }
@@ -30,11 +30,11 @@ namespace GameTest.cs
         }
         public void set(int x, int y, int value)
         {
-            array[y, x] = value;
+            matrix[y, x] = value;
         }
         public int get(int x, int y)
         {
-            if (x >= 0 && x < w && y >= 0 && y < h) return array[x, y];
+            if (x >= 0 && x < width && y >= 0 && y < height) return matrix[x, y];
             else return 2;
         }
 
@@ -46,7 +46,7 @@ namespace GameTest.cs
         public Tile getRandom()
         {
             Random rand = new Random();
-            return new Tile(rand.Next(w), rand.Next(h));
+            return new Tile(rand.Next(width), rand.Next(height));
         }
     }
 }
