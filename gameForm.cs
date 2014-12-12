@@ -36,7 +36,7 @@ namespace GameTest
             scoreDelegate = new setScoreDelegate(setScore);
             timeDelegate = new setTimeDelegate(setTime);
 
-            game = new GameTest.cs.Game(this);
+            game = new cs.Game(this);
             GameThread = new Thread(new ThreadStart(game.start));
             GameThread.Start();
         }
@@ -65,7 +65,16 @@ namespace GameTest
 
         private void BTReset_Click(object sender, EventArgs e)
         {
-            game.reset();
+            //game.reset();
+
+            GameThread.Abort();
+
+            game = new cs.Game(this);
+
+            GameThread = new Thread(new ThreadStart(game.start));
+            GameThread.Start();
+
+            game.setDrawerCtx(canvas);
         }
     }
 }

@@ -170,6 +170,8 @@ namespace GameTest.cs
 
         public void setDrawerCtx(Panel canvas)
         {
+            Console.WriteLine("The height is: " + canvas.Height);
+
             drawer.setCtx(canvas);
         }
         public void removeDrawerCtx()
