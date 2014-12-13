@@ -13,5 +13,6 @@ namespace GameTest.cs
         public bool Up = false;
         public bool Left = false;
         public bool Down = false;
+        public bool AI = false;
     }
 }

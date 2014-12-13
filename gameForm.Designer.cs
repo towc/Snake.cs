@@ -30,13 +30,13 @@
         {
             this.canvas = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BTReset = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.LTime = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.LScore = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.BTReset = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(161, 420);
             this.panel1.TabIndex = 1;
+            // 
+            // BTReset
+            // 
+            this.BTReset.AutoSize = true;
+            this.BTReset.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BTReset.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTReset.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.BTReset.Location = new System.Drawing.Point(0, 298);
+            this.BTReset.Name = "BTReset";
+            this.BTReset.Padding = new System.Windows.Forms.Padding(29, 25, 29, 25);
+            this.BTReset.Size = new System.Drawing.Size(158, 82);
+            this.BTReset.TabIndex = 9;
+            this.BTReset.Text = "Reset";
+            this.BTReset.Click += new System.EventHandler(this.BTReset_Click);
             // 
             // label5
             // 
@@ -131,20 +145,6 @@
             this.label1.Size = new System.Drawing.Size(77, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Score";
-            // 
-            // BTReset
-            // 
-            this.BTReset.AutoSize = true;
-            this.BTReset.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.BTReset.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTReset.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.BTReset.Location = new System.Drawing.Point(0, 298);
-            this.BTReset.Name = "BTReset";
-            this.BTReset.Padding = new System.Windows.Forms.Padding(29, 25, 29, 25);
-            this.BTReset.Size = new System.Drawing.Size(158, 82);
-            this.BTReset.TabIndex = 9;
-            this.BTReset.Text = "Reset";
-            this.BTReset.Click += new System.EventHandler(this.BTReset_Click);
             // 
             // GameForm
             // 

@@ -70,6 +70,13 @@ namespace GameTest.cs
                 if (controls.Right && player.direction != 0) player.direction = 2;
                 if (controls.Up && player.direction != 1) player.direction = 3;
 
+                if (controls.AI)
+                {
+                    Tile head = player.getHead();
+                    if (head.x == board.meal.x) player.direction = 3;
+                    if (head.y == board.meal.y) player.direction = 2;
+                }
+
                 Tile dir = directions[player.direction];
                 tryMoving(dir.x, dir.y);
             }
@@ -187,6 +194,7 @@ namespace GameTest.cs
                 case Keys.Left: controls.Left = value; break;
                 case Keys.Down: controls.Down = value; break;
                 case Keys.Right: controls.Right = value; break;
+                case Keys.Space: controls.AI = value; break;
             }
         }
     }
