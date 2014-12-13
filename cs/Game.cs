@@ -34,6 +34,7 @@ namespace GameTest.cs
         {
             form = GForm;
         }
+
         public void start()
         {
             if (initialized)
@@ -49,6 +50,8 @@ namespace GameTest.cs
             else
             {
                 drawer = new Drawer(height);
+                drawer.setCtx(form.canvas);
+
                 initialized = true;
 
                 start();
@@ -167,13 +170,6 @@ namespace GameTest.cs
         //
         //Drawer stuff
         //
-
-        public void setDrawerCtx(Panel canvas)
-        {
-            Console.WriteLine("The height is: " + canvas.Height);
-
-            drawer.setCtx(canvas);
-        }
         public void removeDrawerCtx()
         {
             drawer.removeCtx();

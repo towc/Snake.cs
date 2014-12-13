@@ -33,17 +33,17 @@ namespace GameTest
         public GameForm()
         {
             InitializeComponent();
+        }
+
+        private void canvas_Paint(object sender, PaintEventArgs e)
+        {
+
             scoreDelegate = new setScoreDelegate(setScore);
             timeDelegate = new setTimeDelegate(setTime);
 
             game = new cs.Game(this);
             GameThread = new Thread(new ThreadStart(game.start));
             GameThread.Start();
-        }
-
-        private void canvas_Paint(object sender, PaintEventArgs e)
-        {
-            game.setDrawerCtx(canvas);
         }
 
         private void GameForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -73,8 +73,6 @@ namespace GameTest
 
             GameThread = new Thread(new ThreadStart(game.start));
             GameThread.Start();
-
-            game.setDrawerCtx(canvas);
         }
     }
 }
